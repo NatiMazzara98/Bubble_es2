@@ -5,7 +5,7 @@ register.addEventListener('click', () => {
     const form = document.getElementById('form');
     const formData = new FormData(form);
 
-    fetch('http://localhost:8080/Model.php', {
+    fetch('http://localhost:8080/connection.php', {
             'method': "POST",
             'body': formData,
             'mode': "no-cors",
