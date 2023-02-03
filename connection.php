@@ -1,5 +1,17 @@
 <?php
 
+$server = "localhost:3306";
+$user = "mydb";
+$pwd = "natalia98!";
+$db = "register";
+
+$conn = new mysqli($server, $user, $pwd, $db);
+
+if($conn->connect_errno)
+{http_response_code(400);
+    echo  $conn->connect_error; exit();}
+
+
 header("Access-Control-Allow-Origin:*");
 header("Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE");
 header('Access-Control-Allow-Credentials: true');
